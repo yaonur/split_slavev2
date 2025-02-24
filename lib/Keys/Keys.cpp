@@ -12,6 +12,8 @@ void Keys::process(int pin_num)
 		isPressed = true;
 		Serial1.write(OnPress);
 		debug("sending:");
+		debug(pin_num);
+		debug(" ");
 		debugln(OnPress);
 	}
 	else if (digitalRead(pin_num) == HIGH && isPressed == true)
@@ -20,8 +22,8 @@ void Keys::process(int pin_num)
 		if (OnRelease)
 		{
 			Serial1.write(OnRelease);
-			debug("on relase:");
-			debugln(OnRelease);
+			// debug("on relase:");
+			// debugln(OnRelease);
 		}
 	}
 }

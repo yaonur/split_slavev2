@@ -1,5 +1,5 @@
 
-#define DEBUG 0
+#define DEBUG O
 
 #if DEBUG == 1
 #define debug(x) Serial.print(x)
